@@ -1,0 +1,25 @@
+{
+  "name": "wexond.net",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass src/style.scss dist/style.css",
+    "watch": "node-sass -w src/style.scss dist/style.css"
+  },
+  "author": "wexond",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "4.1.0",
+    "gulp": "4.0.0",
+    "gulp-clean-css": "4.0.0",
+    "gulp-copy": "4.0.1",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-imagemin": "5.0.3",
+    "gulp-minify-html": "1.0.6",
+    "gulp-sass": "4.0.2",
+    "gulp-terser": "1.1.7",
+    "gulp-uglify": "3.0.2",
+    "node-sass": "4.11.0"
+  }
+}

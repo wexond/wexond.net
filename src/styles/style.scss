@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  font-family: Montserrat;
+  overflow-x: hidden;
+  font-display: fallback;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  min-height: 768px;
+  background-image: linear-gradient(to bottom right, #00b0ff, #3d5afe);
+  color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+
+  &:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: -256px;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    background-image: url(../img/wexond2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+    opacity: 0.2;
+  }
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 128px;
+    background-image: url(../img/bottom.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    opacity: 0.2;
+  }
+}
+
+.navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: center;
+}
+
+.navbar-content {
+  padding: 24px;
+  width: 100%;
+  max-width: 1500px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title {
+  margin-left: 24px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.wrapper-title {
+  font-weight: 800;
+  font-size: 4em;
+  margin-bottom: 16px;
+}
+
+.navbar-logo {
+  background-image: url(../img/wexond2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.wrapper-box {
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.wrapper-info {
+  max-width: 512px;
+  margin-left: -96px;
+  z-index: 2;
+}
+
+.wrapper-screenshot {
+  width: 60%;
+  max-width: 1024px;
+}
+
+.wrapper-description {
+  font-family: Roboto;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-left: 32px;
+  font-size: 1.2em;
+}
+
+.buttons {
+  margin-top: 32px;
+  display: flex;
+  float: right;
+}
+
+.button {
+  cursor: pointer;
+  user-select: none;
+  border-radius: 30px;
+  padding: 16px 24px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: Roboto;
+  margin-left: 16px;
+  transition: 0.3s box-shadow, 0.2s background-color;
+
+  &:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-color: white;
+  }
+}
+
+.outlined-button {
+  @extend .button;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: 0.3s background-color, 0.3s color;
+
+  & .button-icon {
+    filter: invert(100%);
+  }
+
+  &:hover {
+    color: black;
+    background-color: white;
+
+    & .icon-github {
+      filter: none;
+    }
+  }
+}
+
+.button-icon {
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: 0.3s filter;
+}
+
+.icon-github {
+  background-image: url(../img/github.svg);
+}
+
+.icon-windows {
+  background-image: url(../img/windows.svg);
+}
+
+.icon-linux {
+  background-image: url(../img/linux.svg);
+}
+
+.icon-apple {
+  background-image: url(../img/apple.png);
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper-box {
+    flex-flow: column;
+  }
+
+  .wrapper-screenshot {
+    width: auto;
+    width: 90%;
+    max-width: 600px;
+  }
+
+  .wrapper-title {
+    font-size: 2em;
+  }
+
+  .wrapper {
+    &:before {
+      right: 0;
+    }
+  }
+
+  .wrapper-info {
+    margin-left: 0;
+  }
+
+  .button {
+    font-size: 1em;
+  }
+
+  #download {
+    display: none;
+  }
+
+  .wrapper-description {
+    margin-left: 0;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .wrapper-screenshot {
+    max-width: 768px;
+  }
+}
