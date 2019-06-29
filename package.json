@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node-sass src/style.scss dist/style.css",
-    "watch": "node-sass -w src/style.scss dist/style.css"
+    "build": "gulp",
+    "watch": "gulp watch"
   },
   "author": "wexond",
   "license": "MIT",
