@@ -16,15 +16,15 @@ const paths = {
     dest: "dist/js/"
   },
   images: {
-    src: "src/img/**.*",
+    src: "src/img/*.*",
     dest: "dist/img/"
   },
   ico: {
-    src: "src/**.ico",
+    src: "src/*.ico",
     dest: "dist/"
   },
   html: {
-    src: "src/**.html",
+    src: "src/*.html",
     dest: "dist/"
   }
 };
@@ -66,18 +66,19 @@ function scripts() {
     .pipe(gulp.dest(paths.scripts.dest));
 }
 
+var build = gulp.series(
+  clean,
+  gulp.parallel(styles, scripts, html, images, ico)
+);
+
 function watch() {
+  build();
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.src, styles);
   gulp.watch(paths.html.src, html);
   gulp.watch(paths.images.src, images);
   gulp.watch(paths.ico.src, ico);
 }
-
-var build = gulp.series(
-  clean,
-  gulp.parallel(styles, scripts, html, images, ico)
-);
 
 exports.clean = clean;
 exports.styles = styles;
