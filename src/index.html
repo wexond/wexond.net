@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" onload="this.rel='stylesheet'" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500"
       rel="stylesheet"
     />
 
@@ -30,6 +30,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <div id="particles"></div>
       <div class="navbar">
         <div class="navbar-content">
           <div class="navbar-logo"></div>
@@ -37,23 +38,61 @@
         </div>
       </div>
       <div class="wrapper-box">
-        <img src="img/screen.png" alt="Wexond Overlay Electron Chromium Windows macOS Linux" class="wrapper-screenshot"></img>
+       
         <div class="wrapper-info">
           <h1 class="wrapper-title text-shadow">
-            Innovative web browser
+            You make the rules
           </h1>
           <h2 class="wrapper-description text-shadow">
-            Wexond is an open-source, privacy-focused, extensible web browser with a totally new user
-            experience.
+            You decide what will happen with your data. You customize the browser to fit your needs. Just you.
           </h2>
           <div class="buttons">
+            <a class="button colored-button" id="download"><div class="download-icon" id="button-icon"></div><div id="download-text">Download now</div></a>
             <a href="https://github.com/wexond/wexond" class="outlined-button"><div class="button-icon icon-github"></div>GitHub</a>
-            <a class="button" id="download"><div id="download-icon" class="button-icon"></div><div id="download-text">Download</div></a>
           </div>
+        
         </div>
+        
+      </div>
+
+   
+    </div>
+
+    <div class="section">
+    <div class="customization">
+      
+      <div class="box">
+        <div class="overline">Customization</div>
+        <div id="customization-title">
+          The design is all yours
+        </div>
+        <div id="customization-desc">
+          Customize the browser UI however you want.
+        </div>
+      </div>
+      <img src="img/screen.png" alt="Wexond Overlay Electron Chromium Windows macOS Linux" class="wrapper-screenshot"></img>
+    </div>
+    </div>
+    
+    <div class="section">
+      <div class="card card-blue" id="download-card">
+        <img src="img/wexond-shape.png" id="download-card-logo" alt="Wexond Overlay Electron Chromium Windows macOS Linux"></img>
+        <div id="download-card-info">
+          <div class="overline" style="color: white; opacity: 0.8;">Download</div>
+          <div id="download-card-title">You do you</div>
+          <div id="download-card-desc">Don't let big companies to spy on you. Browse the way you want, thanks to the built-in adblocker and UI customization and more.</div>
+        </div>
+        
+        <a class="button white-button" id="download"><div id="download-icon" class="button-icon icon-windows"></div><div id="download-text">Download now</div></a>
       </div>
     </div>
 
+    <div class="footer">
+
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
