@@ -7,8 +7,6 @@
     "build": "gulp",
     "watch": "gulp watch"
   },
-  "author": "wexond",
-  "license": "MIT",
   "devDependencies": {
     "del": "5.1.0",
     "gulp": "4.0.2",
