@@ -9,8 +9,10 @@ export default ({ children }: { children: React.ReactNode }) => {
     <>
       <Seo />
       <GlobalStyle />
-      <StyledLayout>{children}</StyledLayout>
-      <Footer />
+      <StyledLayout>
+        {children}
+        <Footer />
+      </StyledLayout>
     </>
   );
 };

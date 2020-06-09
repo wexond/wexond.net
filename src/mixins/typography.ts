@@ -8,7 +8,7 @@ export const robotoRegular = () => css`
   font-weight: 400;
 `;
 
-export const robotoBold = () => css`
+export const robotoMedium = () => css`
   font-family: Roboto;
   font-weight: 500;
 `;

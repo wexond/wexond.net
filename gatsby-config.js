@@ -15,11 +15,11 @@ module.exports = {
       options: {
         name: `gatsby-starter-default`,
         short_name: `wexond.net`,
-        start_url: `.`,
+        start_url: `/`,
         icon: `${__dirname}/src/resources/images/favicon.png`,
       },
     },
     'gatsby-plugin-styled-components',
   ],
-  pathPrefix: '.',
+  pathPrefix: '/',
 };
